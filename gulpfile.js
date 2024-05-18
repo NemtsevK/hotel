@@ -1,14 +1,13 @@
+import { readFileSync, rmSync } from 'node:fs';
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import sass from 'gulp-dart-sass';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
-import csso from 'postcss-csso';
 import terser from 'gulp-terser';
 import webp from 'gulp-webp';
 import imagemin from 'gulp-imagemin';
 import svgo from 'gulp-svgmin';
-import { deleteAsync } from 'del';
 import browser from 'browser-sync';
 import { stacksvg } from 'gulp-stacksvg';
 
@@ -37,7 +36,6 @@ export const processStyles = () => {
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
       autoprefixer(),
-      csso()
     ]))
     .pipe(dest(`${BUILD_ROOT}/css`, { sourcemaps: '.' }))
     .pipe(browser.stream());
@@ -91,7 +89,13 @@ const copyFiles = (done) => {
   done();
 };
 
-const removeBuild = () => deleteAsync(BUILD_ROOT);
+const removeBuild = (done) => {
+  rmSync(BUILD_ROOT, {
+    force: true,
+    recursive: true,
+  });
+  done();
+}
 
 const startServer = () => {
   browser.init({
@@ -101,15 +105,13 @@ const startServer = () => {
     cors: true,
     notify: false,
     ui: false,
+  }, (err, bs) => {
+    bs.addMiddleware('*', (req, res) => {
+      res.write(readFileSync(`${BUILD_ROOT}/404.html`));
+      res.end();
+    });
   });
-};
 
-const reloadServer = (done) => {
-  browser.reload();
-  done();
-};
-
-const startWatcher = () => {
   watch(PATH_TO_STYLES, series(processStyles));
   watch(PATH_TO_SCRIPTS, series(processScripts));
   watch(PATH_TO_MARKUP, series(processMarkup, reloadServer));
@@ -131,6 +133,11 @@ const startWatcher = () => {
       reloadServer,
     )
   );
+};
+
+const reloadServer = (done) => {
+  browser.reload();
+  done();
 };
 
 export const buildProd = (done) => {
@@ -163,6 +170,5 @@ export const runDev = (done) => {
       createWebp
     ),
     startServer,
-    startWatcher,
   )(done);
 }
