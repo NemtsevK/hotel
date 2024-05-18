@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Отель «Castle». Контакты</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="images/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body class="page__body">
+<h1 class="visually-hidden">Hotel GF</h1>
+<header class="header">
+  <div class="header__container container">
+    <div class="header__logo">HGF</div>
+    <label class="header__toggle-nav" aria-label="Открыть меню" title="Открыть меню">
+      <input class="header__toggle-nav-checkbox visually-hidden" type="checkbox">
+      <span class="header__toggle-nav-inner"></span>
+    </label>
+    <nav class="header__nav nav">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__item-link" href="index.html">Главная</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__item-link" href="about.html">О нас</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__item-link nav__item-link--current" href="contact.html">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main class="main">
+  <section class="main-contact">
+    <div class="container">
+      <h2 class="main-contact__title"><strong class="primary-text">Fale</strong> Conosco</h2>
+      <p>Por favor, preencha o formulário abaixo para contato</p>
+      <form class="form" action="">
+        <div class="form__group">
+          <label class="form__label" for="name">Имя</label>
+          <input class="form__input" id="name" name="name">
+        </div>
+        <div class="form__group">
+          <label class="form__text" for="email">Email</label>
+          <input class="form__input" id="email" type="email" name="email">
+        </div>
+        <div class="form__group">
+          <label class="form__text" for="message">Сообщение</label>
+          <textarea class="form__input form__input--textarea" id="message" name="message"></textarea>
+        </div>
+        <button class="form__button button" type="submit">Enviar Mensagem</button>
+      </form>
+    </div>
+  </section>
+  <section class="contacts">
+    <h2 class="visually-hidden">Контакты</h2>
+    <div class="contacts__container container">
+      <dl class="contacts__item">
+        <dt class="contacts__item-key">Адрес</dt>
+        <dd class="contacts__item-value">50 Main st, Boston MA</dd>
+      </dl>
+      <dl class="contacts__item">
+        <dt class="contacts__item-key">Телефон</dt>
+        <dd class="contacts__item-value">+7 (617) 555-5555</dd>
+      </dl>
+      <dl class="contacts__item">
+        <dt class="contacts__item-key">Email</dt>
+        <dd class="contacts__item-value">shirina@email.net</dd>
+      </dl>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="footer__container container">
+    <div class="footer__copyright">
+      <span class="footer__copyright-text">&copy; 2024.Отель «Castle»</span>
+      <span class="footer__copyright-text">Официальный сайт</span>
+    </div>
+    <ul class="footer__social social">
+      <li class="social__item">
+        <a class="social__item-link social__item-link--vk" href="#" title="Наша группа ВКонтакте" aria-label="Наша группа ВКонтакте"></a>
+      </li>
+      <li class="social__item">
+        <a class="social__item-link social__item-link--telegram" href="#" title="Наш канал в Телеграм" aria-label="Наш канал в Телеграм"></a>
+      </li>
+      <li class="social__item">
+        <a class="social__item-link social__item-link--youtube" href="#" title="Наш канал в YouTube" aria-label="Наш канал в YouTube"></a>
+      </li>
+      <li class="social__item">
+        <a class="social__item-link social__item-link--github" href="#" title="Исходный код в GitHub" aria-label="Исходный код в GitHub"></a>
+      </li>
+    </ul>
+    <div class="footer__developer developer">
+      <a class="developer__link" href="http://nemtsevk.ru" title="Разработчик Константин Немцев" aria-label="Разработчик Константин Немцев" target="_blank"></a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
