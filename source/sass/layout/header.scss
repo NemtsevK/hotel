@@ -1,0 +1,28 @@
+
+
+
+.header {
+  background: #353535;
+  overflow: auto;
+}
+
+.header__container {
+  display: flex;
+}
+
+.header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: var(--text-secondary);
+  font-weight: 700;
+}
+
+.header__toggle-nav {
+  display: none;
+}
+
+.header__nav {
+  flex: 1 0 auto;
+}

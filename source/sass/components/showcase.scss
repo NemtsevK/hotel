@@ -1,0 +1,46 @@
+@use "../base/variables" as *;
+
+.showcase {
+  background-image: url('../images/content/showcase.jpg');
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+  margin: 0 auto;
+  padding: 30px 0 50px;
+  color: var(--text-secondary);
+}
+
+@media (min-width: $tablet) {
+  .showcase {
+    padding: 100px 0 100px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .showcase {
+    padding-top: 160px;
+  }
+}
+
+.showcase__title {
+  margin: 0;
+  font-size: 60px;
+}
+
+.showcase__description {
+  margin: 30px 0 0;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.showcase__button {
+  color: white;
+  background-color: #353535;
+  margin: 30px auto 0;
+  cursor: pointer;
+}
+
+.showcase__button:hover {
+  color: #353535;
+  background-color: #f7c08a;
+}

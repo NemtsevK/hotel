@@ -1,0 +1,20 @@
+@use "../base/variables" as *;
+
+.container {
+
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (min-width: $tablet) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .container {
+    width: 1200px;
+    padding: 0;
+  }
+}

@@ -1,0 +1,17 @@
+:root {
+  --background-primary: #ffffff;
+  --background-secondary: #559be7;
+  --background-special: #454545;
+
+  --text-primary: #000000;
+  --text-secondary: #f4f4f4;
+  --text-special: #f7c08a;
+
+  --border-primary: #dddddd
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

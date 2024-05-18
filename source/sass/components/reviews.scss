@@ -1,0 +1,57 @@
+@use "../base/variables" as *;
+
+.reviews {
+  min-height: 600px;
+  background: url('../images/content/test-bg.jpg') center center/cover;
+  padding: 40px 0;
+}
+
+.reviews__title {
+  margin: 0;
+  text-align: center;
+  font-size: 40px;
+  color: white;
+}
+
+.reviews__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 40px 0 0;
+
+}
+
+.reviews__item {
+  padding: 20px;
+  min-height: 140px;
+  opacity: 0.9;
+  background-color: #f7c08a;
+  border-radius: 10px;
+}
+
+@media (min-width: $tablet) {
+  .reviews__item {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 30px;
+  }
+}
+
+.reviews__item-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 150px;
+  height: auto;
+  border-radius: 50%;
+}
+
+@media (min-width: $tablet) {
+  .reviews__item {
+    width: 100%;
+  }
+}
+
+.reviews__item-description {
+  margin: 0;
+  color: #353535;
+}

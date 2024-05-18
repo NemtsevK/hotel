@@ -1,0 +1,25 @@
+@use "base/variables" as *;
+@use "base/global";
+@use "base/visually-hidden";
+@use "base/fonts";
+@use "layout/page";
+@use "layout/header";
+@use "layout/main";
+@use "layout/footer";
+@use "components/title";
+@use "components/text";
+@use "components/button";
+@use "components/nav";
+@use "components/container";
+@use "components/about";
+@use "components/contacts";
+@use "components/developer";
+@use "components/form";
+@use "components/main-contact";
+@use "components/reviews";
+@use "components/section-one";
+@use "components/section-two";
+@use "components/showcase";
+@use "components/social";
+
+
