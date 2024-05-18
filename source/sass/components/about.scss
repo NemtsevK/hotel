@@ -6,10 +6,7 @@
 
 .about__container {
 
-}
-
-@media (min-width: $desktop) {
-  .about__container {
+  @media (min-width: $desktop) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
@@ -32,16 +29,12 @@
 .about__picture {
   max-width: 600px;
   margin: 20px auto 0;
-}
 
-@media (min-width: $tablet) {
-  .about__picture {
+  @media (min-width: $tablet) {
     margin-top: 40px;
   }
-}
 
-@media (min-width: $desktop) {
-  .about__picture {
+  @media (min-width: $desktop) {
     margin-top: 0;
   }
 }

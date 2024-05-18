@@ -14,14 +14,14 @@
   padding: 20px;
   color: var(--text-secondary);
   text-decoration: none;
-}
 
-.nav__item-link:hover {
-  color: var(--text-special);
-  background-color: var(--background-special);
-}
+  &:hover {
+    color: var(--text-special);
+    background-color: var(--background-special);
+  }
 
-.nav__item-link--current {
-  color: var(--text-special);
-  background-color: var(--background-special);
+  &--current {
+    color: var(--text-special);
+    background-color: var(--background-special);
+  }
 }

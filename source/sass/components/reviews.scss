@@ -18,7 +18,6 @@
   flex-direction: column;
   gap: 20px;
   margin: 40px 0 0;
-
 }
 
 .reviews__item {
@@ -27,10 +26,8 @@
   opacity: 0.9;
   background-color: #f7c08a;
   border-radius: 10px;
-}
 
-@media (min-width: $tablet) {
-  .reviews__item {
+  @media (min-width: $tablet) {
     display: grid;
     grid-template-columns: 150px 1fr;
     gap: 30px;
@@ -43,15 +40,20 @@
   max-width: 150px;
   height: auto;
   border-radius: 50%;
-}
 
-@media (min-width: $tablet) {
-  .reviews__item {
-    width: 100%;
+  @media (min-width: $tablet) {
+    grid-row: span 2;
   }
 }
 
 .reviews__item-description {
   margin: 0;
   color: #353535;
+}
+
+.reviews__item-name {
+  display: block;
+  padding-right: 40px;
+  font-style: italic;
+  text-align: right;
 }

@@ -2,28 +2,28 @@
   display: flex;
   justify-content: end;
   align-items: center;
-}
 
+}
 
 .developer__link {
 
-}
+  &::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: var(--text-secondary);
+    mask-image: url("../images/sprite.svg#nemtsev-k");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+  }
 
-.developer__link:hover {
-  opacity: 0.8;
-}
+  &:hover::before {
+    background-color: var(--text-special);
+  }
 
-.developer__link:active {
-  opacity: 0.6;
-}
-
-.developer__link::before {
-  content: "";
-  display: block;
-  width: 40px;
-  height: 40px;
-  background-image: url("../images/icons/example-alt.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
+  &:active::before {
+    background-color: var(--text-secondary);
+  }
 }

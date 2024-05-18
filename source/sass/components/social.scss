@@ -2,7 +2,7 @@
   display: flex;
   justify-content: start;
   align-items: center;
-  gap: 15px;
+  gap: 25px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -10,23 +10,46 @@
 
 .social__item-link {
 
-}
+  &:hover {
+    opacity: 0.8;
+  }
 
-.social__item-link:hover {
-  opacity: 0.8;
-}
+  &:active {
+    opacity: 0.6;
+  }
 
-.social__item-link:active {
-  opacity: 0.6;
-}
+  &::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: var(--text-secondary);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+  }
 
-.social__item-link::before {
-  content: "";
-  display: block;
-  width: 30px;
-  height: 30px;
-  background-image: url("../images/icons/example-alt.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
+  &:hover::before {
+    background-color: var(--text-special);
+  }
+
+  &:active::before {
+    background-color: var(--text-secondary);
+  }
+
+  &--vk::before {
+    mask-image: url("../images/sprite.svg#vk");
+  }
+
+  &--youtube::before {
+    mask-image: url("../images/sprite.svg#youtube");
+  }
+
+  &--telegram::before {
+    mask-image: url("../images/sprite.svg#telegram");
+  }
+
+  &--github::before {
+    mask-image: url("../images/sprite.svg#github");
+  }
 }
