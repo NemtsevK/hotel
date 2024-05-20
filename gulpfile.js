@@ -97,6 +97,11 @@ const removeBuild = (done) => {
   done();
 }
 
+const reloadServer = (done) => {
+  browser.reload();
+  done();
+};
+
 const startServer = () => {
   browser.init({
     server: {
@@ -133,11 +138,6 @@ const startServer = () => {
       reloadServer,
     )
   );
-};
-
-const reloadServer = (done) => {
-  browser.reload();
-  done();
 };
 
 export const buildProd = (done) => {
